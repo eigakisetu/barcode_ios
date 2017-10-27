@@ -209,7 +209,7 @@ class UserLogoutRequestModel: HttpRequestModel {
 
 //バーコード 決済デモ
 class BarcodeRequestModel: HttpRequestModel {
-    var cartId: String
+    var itemId: String
     
     var method: HTTPMethod {
         return .post
@@ -217,20 +217,21 @@ class BarcodeRequestModel: HttpRequestModel {
     
     var parameters: Parameters? {
         return [
-            "cart_id": self.cartId
+            "item_id": self.itemId,
+            "sf_id":"0037F00000EJmnW"
         ]
     }
     
     var path: String {
-        return "api/settlement"
+        return "api/cart"
     }
     
     var url : URL {
         return URL(string: API.endPoint)!.appendingPathComponent(self.path)
     }
     
-    init(cartId: String) {
-        self.cartId = cartId
+    init(itemId: String) {
+        self.itemId = itemId
     }
 }
 

@@ -23,8 +23,8 @@ class BarcodeViewModel {
         self.api = api
     }
     
-    func fetch(cartId:String) -> Observable<Bool>  {
-        return api.barcodeUpdate(cartId: cartId)
+    func fetch(itemId:String) -> Observable<Bool>  {
+        return api.barcodeUpdate(itemId: itemId)
             .map { result in
                 print("BarcodeViewModel result",result)
                 return true

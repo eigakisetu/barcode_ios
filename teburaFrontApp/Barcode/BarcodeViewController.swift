@@ -292,41 +292,39 @@ class BarcodeViewController: UIViewController , AVCaptureMetadataOutputObjectsDe
     var barcodeCount = 0
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
-        //                self.captureSession.stopRunning();
+        self.captureSession.stopRunning();
         
         //読み込みインジゲーターを発動
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         self.showProgressIndicator()
         
+        if metadataObjects == nil || metadataObjects.count == 0 {
+            let aTitle = "読み取り成功"
+            let aMessage = "成功"
+            let alert = UIAlertController(title: aTitle, message: aMessage, preferredStyle: .alert)
+            
+            // 設定を開くボタン
+            alert.addAction(
+                UIAlertAction(
+                    title: "設定を開く",style: .default,
+                    handler:  { action in
+                        UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
+                })
+            )
+            // アラートを表示する
+            self.present(alert, animated: false, completion:nil)
+            return
+        }
         
-        //        if metadataObjects == nil || metadataObjects.count == 0 {
-        //            let aTitle = "読み取り成功"
-        //            let aMessage = "成功"
-        //            let alert = UIAlertController(title: aTitle, message: aMessage, preferredStyle: .alert)
-        //
-        //            // 設定を開くボタン
-        //            alert.addAction(
-        //                UIAlertAction(
-        //                    title: "設定を開く",style: .default,
-        //                    handler:  { action in
-        //                        UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
-        //                })
-        //            )
-        //            // アラートを表示する
-        //            self.present(alert, animated: false, completion:nil)
-        //            return
-        //        }
-        
-        
-        // 複数のメタデータを検出できる
-        for metadata in metadataObjects as! [AVMetadataMachineReadableCodeObject] {
-            // QRコードのデータかどうかの確認
-            if metadata.type == AVMetadataObjectTypeQRCode {
+        let metadata: AVMetadataMachineReadableCodeObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        // QRコードのデータかどうかの確認
+        if metadata.type == AVMetadataObjectTypeQRCode {
+
                 if metadata.stringValue != nil {
                     self.barcodeCount+=1
                     
                     self.viewModel
-                        .fetch(cartId: metadata.stringValue)
+                        .fetch(itemId: metadata.stringValue)
                         .bind { [unowned self] result in
                             print("barcodeviewmodel result",result)
                             self.barcodeCount -= 1
@@ -371,7 +369,6 @@ class BarcodeViewController: UIViewController , AVCaptureMetadataOutputObjectsDe
                     AudioServicesPlaySystemSound(soundIdRing)
                 }
             }
-        }
     }
     
     //ログインインジケータ

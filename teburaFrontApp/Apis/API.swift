@@ -182,14 +182,14 @@ class API {
     /*
      * バーコードupdate用
      */
-    func barcodeUpdate(cartId:String) -> Observable<BarcodeResource> {
+    func barcodeUpdate(itemId:String) -> Observable<BarcodeResource> {
         typealias listError = BarcodeError
         print("barcodeUpdate発動1")
         
         let observable:Observable<BarcodeResource> =  Observable.create { [unowned self] observer in
             print("barcodeUpdate発動2")
             
-            guard let request = self.makeBarcodeRequest(cartId: cartId) else {
+            guard let request = self.makeBarcodeRequest(itemId: itemId) else {
                 observer.onError(BarcodeError.FailedOfCreatingRequest(nil))
                 return Disposables.create()
             }
@@ -280,8 +280,8 @@ class API {
     
     
     //バーコード用URLRequestを作成
-    private func makeBarcodeRequest(cartId:String) -> URLRequest? {
-        let builder = HttpRequestBuilder(requestModel: BarcodeRequestModel(cartId: cartId))
+    private func makeBarcodeRequest(itemId:String) -> URLRequest? {
+        let builder = HttpRequestBuilder(requestModel: BarcodeRequestModel(itemId: itemId))
         
         //        guard let user = self.loadUser() else {
         //            return nil

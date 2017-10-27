@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,138 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="teburaFrontApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKQ-Ka-X5O">
+                                <rect key="frame" x="156" y="318" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="スタート"/>
+                                <connections>
+                                    <segue destination="jaz-w3-MOd" kind="show" id="faP-QU-Egq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-26" y="32"/>
+        </scene>
+        <!--カートに入れる-->
+        <scene sceneID="640-kf-bKM">
+            <objects>
+                <viewController id="kD5-WE-BUe" customClass="BarcodeViewController" customModule="teburaFrontApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mw0-h6-WL2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qts-xm-WFq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5gl-vD-031"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="カートに入れる" id="J6A-6H-ngq"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsn-Ok-XAK" userLabel="Preview">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qts-xm-WFq" firstAttribute="top" secondItem="cDO-dv-qfE" secondAttribute="top" id="FaJ-YS-eSd"/>
+                            <constraint firstItem="qts-xm-WFq" firstAttribute="leading" secondItem="cDO-dv-qfE" secondAttribute="leading" id="JvX-wm-g7V"/>
+                            <constraint firstItem="qts-xm-WFq" firstAttribute="trailing" secondItem="cDO-dv-qfE" secondAttribute="trailing" id="TlI-FD-Boy"/>
+                            <constraint firstItem="cDO-dv-qfE" firstAttribute="bottom" secondItem="qsn-Ok-XAK" secondAttribute="bottom" id="U9w-gN-Fnr"/>
+                            <constraint firstItem="qsn-Ok-XAK" firstAttribute="top" secondItem="qts-xm-WFq" secondAttribute="bottom" id="YoW-bc-Ivh"/>
+                            <constraint firstItem="qsn-Ok-XAK" firstAttribute="leading" secondItem="cDO-dv-qfE" secondAttribute="leading" id="h2h-AB-h1o"/>
+                            <constraint firstItem="cDO-dv-qfE" firstAttribute="trailing" secondItem="qsn-Ok-XAK" secondAttribute="trailing" id="ylU-GB-WlW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cDO-dv-qfE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="カートに入れる" id="Q77-Od-tIU"/>
+                    <connections>
+                        <outlet property="previewView" destination="qsn-Ok-XAK" id="RdE-AJ-BRB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXB-sP-up2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="365"/>
+        </scene>
+        <!--カート一覧-->
+        <scene sceneID="bUD-5g-qou">
+            <objects>
+                <viewController id="qjN-mg-C0f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fC8-Ll-OFp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHY-xZ-n8Q">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6Ap-uz-tGf"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="カート一覧" id="p4d-uh-SBD"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmF-nP-VKk">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EY5-Sg-aCE">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EY5-Sg-aCE" id="ISz-Hl-3xv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SUn-K0-pI6" firstAttribute="bottom" secondItem="VmF-nP-VKk" secondAttribute="bottom" id="NMY-Vo-g2o"/>
+                            <constraint firstItem="MHY-xZ-n8Q" firstAttribute="top" secondItem="SUn-K0-pI6" secondAttribute="top" id="ScQ-g2-Qzx"/>
+                            <constraint firstItem="VmF-nP-VKk" firstAttribute="leading" secondItem="SUn-K0-pI6" secondAttribute="leading" id="VEh-lS-LZZ"/>
+                            <constraint firstItem="SUn-K0-pI6" firstAttribute="trailing" secondItem="VmF-nP-VKk" secondAttribute="trailing" id="bhR-Gf-TKt"/>
+                            <constraint firstItem="MHY-xZ-n8Q" firstAttribute="trailing" secondItem="SUn-K0-pI6" secondAttribute="trailing" id="pYe-l1-At5"/>
+                            <constraint firstItem="VmF-nP-VKk" firstAttribute="top" secondItem="MHY-xZ-n8Q" secondAttribute="bottom" id="rMl-hI-AsM"/>
+                            <constraint firstItem="MHY-xZ-n8Q" firstAttribute="leading" secondItem="SUn-K0-pI6" secondAttribute="leading" id="suf-Hj-VR2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SUn-K0-pI6"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="カート一覧" id="WcF-uf-Be7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xE7-zc-k33" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="-300"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Czr-2h-fP9">
+            <objects>
+                <tabBarController id="jaz-w3-MOd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zeb-75-zjl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qjN-mg-C0f" kind="relationship" relationship="viewControllers" id="Ywz-LU-Bdz"/>
+                        <segue destination="kD5-WE-BUe" kind="relationship" relationship="viewControllers" id="per-nk-uuQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbY-Hf-YA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="32"/>
         </scene>
     </scenes>
 </document>
