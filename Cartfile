@@ -1,0 +1,17 @@
+github "Alamofire/Alamofire"
+github "ReactiveX/RxSwift" ~> 3.0
+github "RxSwiftCommunity/RxRealm"
+github "RxSwiftCommunity/RxOptional" ~> 3.1.3
+github "RxSwiftCommunity/RxSwiftExt"
+github "johnsundell/unbox"
+github "realm/realm-cocoa"
+github "marketplacer/keychain-swift" ~> 8.0
+github "Swinject/Swinject" ~> 2.0.0
+github "keygx/GradientCircularProgress"
+github "ashleymills/Reachability.swift" ~> 3.0
+github "onevcat/Kingfisher" ~> 3.0
+github "PureLayout/PureLayout"
+github "stripe/stripe-ios"
+
+# Uncomment if you use SwinjectStoryboard
+github "Swinject/SwinjectStoryboard" ~> 1.0.0
