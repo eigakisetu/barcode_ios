@@ -235,6 +235,32 @@ class BarcodeRequestModel: HttpRequestModel {
     }
 }
 
+//バーコード 決済デモ
+class cartListsRequestModel: HttpRequestModel {
+    
+    var method: HTTPMethod {
+        return .get
+    }
+    
+    var parameters: Parameters? {
+        return [
+            "sf_id":"0037F00000EJmnW"
+        ]
+    }
+    
+    var path: String {
+        return "api/cartLists"
+    }
+    
+    var url : URL {
+        return URL(string: API.endPoint)!.appendingPathComponent(self.path)
+    }
+    
+    init() {
+    }
+}
+
+
 
 
 

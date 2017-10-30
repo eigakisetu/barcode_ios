@@ -47,6 +47,12 @@
 		F62DA9721FA30ABE00891162 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DA9611FA30ABE00891162 /* Stripe.framework */; };
 		F62DA9741FA30AE700891162 /* GradientCircularProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DA9731FA30AE700891162 /* GradientCircularProgress.framework */; };
 		F62DA9771FA3100900891162 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DA9761FA3100900891162 /* DIContainer.swift */; };
+		F6712CE21FA6C99A00DB5242 /* CartListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6712CE11FA6C99A00DB5242 /* CartListsViewController.swift */; };
+		F6712CE61FA6C9FE00DB5242 /* CartListsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6712CE51FA6C9FE00DB5242 /* CartListsTableCell.xib */; };
+		F6712CE81FA6CA1900DB5242 /* CartListsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6712CE71FA6CA1900DB5242 /* CartListsModel.swift */; };
+		F6712CEA1FA6CA8400DB5242 /* CartListsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6712CE91FA6CA8400DB5242 /* CartListsResource.swift */; };
+		F6DD0C7E1FA713BB00DCEA04 /* CartListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DD0C7C1FA713BB00DCEA04 /* CartListsTableViewCell.swift */; };
+		F6DD0C7F1FA713BB00DCEA04 /* CartListsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6DD0C7D1FA713BB00DCEA04 /* CartListsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +99,12 @@
 		F62DA9611FA30ABE00891162 /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stripe.framework; path = Carthage/Build/iOS/Stripe.framework; sourceTree = "<group>"; };
 		F62DA9731FA30AE700891162 /* GradientCircularProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GradientCircularProgress.framework; path = Carthage/Build/iOS/GradientCircularProgress.framework; sourceTree = "<group>"; };
 		F62DA9761FA3100900891162 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		F6712CE11FA6C99A00DB5242 /* CartListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListsViewController.swift; sourceTree = "<group>"; };
+		F6712CE51FA6C9FE00DB5242 /* CartListsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartListsTableCell.xib; sourceTree = "<group>"; };
+		F6712CE71FA6CA1900DB5242 /* CartListsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListsModel.swift; sourceTree = "<group>"; };
+		F6712CE91FA6CA8400DB5242 /* CartListsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListsResource.swift; sourceTree = "<group>"; };
+		F6DD0C7C1FA713BB00DCEA04 /* CartListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListsTableViewCell.swift; sourceTree = "<group>"; };
+		F6DD0C7D1FA713BB00DCEA04 /* CartListsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartListsTableViewCell.xib; sourceTree = "<group>"; };
 		F7E7CD08DB9F4D673F5744CE /* Pods_teburaFrontApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teburaFrontApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,6 +169,7 @@
 		F617AA2E1FA1AC4900203647 /* teburaFrontApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6712CE01FA6C97800DB5242 /* Cart */,
 				F62DA9491FA308C000891162 /* Login */,
 				F62DA9461FA308A600891162 /* Storage */,
 				F62DA9431FA3088B00891162 /* Services */,
@@ -192,6 +205,7 @@
 				F62DA92F1FA307CC00891162 /* BarcodeResource.swift */,
 				F62DA9311FA307DE00891162 /* LoginResource.swift */,
 				F62DA9331FA307ED00891162 /* LogoutResource.swift */,
+				F6712CE91FA6CA8400DB5242 /* CartListsResource.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -281,6 +295,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6712CE01FA6C97800DB5242 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				F6712CE11FA6C99A00DB5242 /* CartListsViewController.swift */,
+				F6712CE51FA6C9FE00DB5242 /* CartListsTableCell.xib */,
+				F6712CE71FA6CA1900DB5242 /* CartListsModel.swift */,
+				F6DD0C7C1FA713BB00DCEA04 /* CartListsTableViewCell.swift */,
+				F6DD0C7D1FA713BB00DCEA04 /* CartListsTableViewCell.xib */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,6 +370,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DD0C7F1FA713BB00DCEA04 /* CartListsTableViewCell.xib in Resources */,
+				F6712CE61FA6C9FE00DB5242 /* CartListsTableCell.xib in Resources */,
 				F617AA3A1FA1AC4900203647 /* LaunchScreen.storyboard in Resources */,
 				F617AA371FA1AC4900203647 /* Assets.xcassets in Resources */,
 				F617AA351FA1AC4900203647 /* Main.storyboard in Resources */,
@@ -436,10 +464,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6712CE21FA6C99A00DB5242 /* CartListsViewController.swift in Sources */,
+				F6712CE81FA6CA1900DB5242 /* CartListsModel.swift in Sources */,
 				F62DA9481FA308BC00891162 /* UserLocalDefaults.swift in Sources */,
 				F62DA9371FA3080700891162 /* Response.swift in Sources */,
 				F62DA9301FA307CC00891162 /* BarcodeResource.swift in Sources */,
 				F62DA94B1FA308CE00891162 /* LoginViewController.swift in Sources */,
+				F6DD0C7E1FA713BB00DCEA04 /* CartListsTableViewCell.swift in Sources */,
 				F62DA94D1FA308DB00891162 /* LoginViewModel.swift in Sources */,
 				F62DA9771FA3100900891162 /* DIContainer.swift in Sources */,
 				F62DA93A1FA3082100891162 /* Config.swift in Sources */,
@@ -451,6 +482,7 @@
 				F62DA93C1FA3084400891162 /* BarcodeViewModel.swift in Sources */,
 				F62DA92B1FA3079800891162 /* API.swift in Sources */,
 				F62DA93F1FA3085E00891162 /* BarcodeViewController.swift in Sources */,
+				F6712CEA1FA6CA8400DB5242 /* CartListsResource.swift in Sources */,
 				F62DA9421FA3087F00891162 /* UserModel.swift in Sources */,
 				F617AA301FA1AC4900203647 /* AppDelegate.swift in Sources */,
 			);

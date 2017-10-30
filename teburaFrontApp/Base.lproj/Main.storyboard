@@ -80,7 +80,7 @@
         <!--カート一覧-->
         <scene sceneID="bUD-5g-qou">
             <objects>
-                <viewController id="qjN-mg-C0f" sceneMemberID="viewController">
+                <viewController id="qjN-mg-C0f" customClass="CartListsViewController" customModule="teburaFrontApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fC8-Ll-OFp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EY5-Sg-aCE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartListsTableViewCell" id="EY5-Sg-aCE" customClass="CartListsTableViewCell" customModule="teburaFrontApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EY5-Sg-aCE" id="ISz-Hl-3xv">
@@ -122,6 +122,9 @@
                         <viewLayoutGuide key="safeArea" id="SUn-K0-pI6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="カート一覧" id="WcF-uf-Be7"/>
+                    <connections>
+                        <outlet property="cartListsTableView" destination="VmF-nP-VKk" id="GBF-sc-aWF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xE7-zc-k33" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -56,6 +56,16 @@ let di: Container = {
         )
     }
     
+    c.register(CartListsViewModel.self)
+    { (container: Resolver, refreshStarted: Observable<Void>, modelSelected: Observable<CartListsResource.Items>) in
+        CartListsViewModel(
+            api: container.resolve(API.self)!,
+            refreshStarted: refreshStarted,
+            selected: modelSelected,
+            localStore: UserLocalDefaults.instance
+        )
+    }
+    
     return c
     
 }()
