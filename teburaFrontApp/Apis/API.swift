@@ -258,44 +258,52 @@ class API {
             ]
             
             let _response = Alamofire.request(url, method: .get, parameters: params)
-                .responseString { response in
+                .responseJSON { response in
                     switch response.result {
                     case .success(let success):
                         print("stripe success",success)
+//
+//                                            let dummy:NSDictionary = [
+//                                                "status":"OK",
+//                                                "data":[
+//                                                    [
+//                                                        "Id": "a007F000005c68ZQAQ",
+//                                                        "Item__r": [
+//                                                            "Name": "電気たこ焼き器(アミー WL-G102)",
+//                                                            "Price__c": 925,
+//                                                            "Image__c": "https://placehold.jp/150x200.png"
+//                                                        ]
+//                                                    ],
+//                                                    [
+//                                                        "Id": "a007F000005c68eQAA",
+//                                                        "Item__r": [
+//                                                            "Name": "布張りソファ(ローエン) 2人用・3人用値下げ 布張りソファ(ローエン)",
+//                                                            "Price__c": 27686,
+//                                                            "Image__c": "https://placehold.jp/150x200.png"
+//                                                        ]
+//                                                    ]
+//                                                ]
+//                                            ]
                         
-                                            let dummy:NSDictionary = [
-                                                "status":"OK",
-                                                "data":[
-                                                    [
-                                                        "Id": "a007F000005c68ZQAQ",
-                                                        "Item__r": [
-                                                            "Name": "電気たこ焼き器(アミー WL-G102)",
-                                                            "Price__c": 925,
-                                                            "Image__c": "https://placehold.jp/150x200.png"
-                                                        ]
-                                                    ],
-                                                    [
-                                                        "Id": "a007F000005c68eQAA",
-                                                        "Item__r": [
-                                                            "Name": "布張りソファ(ローエン) 2人用・3人用値下げ 布張りソファ(ローエン)",
-                                                            "Price__c": 27686,
-                                                            "Image__c": "https://placehold.jp/150x200.png"
-                                                        ]
-                                                    ]
-                                                ]
-                                            ]
+//
+//                        do {
+//                            let json = success as? UnboxableDictionary
+//                            let resource: CartListsResource = try! unbox(dictionary: json!)
+//                        } catch {
+//                            print("An error occurred: \(error)")
+//                        }
                         
                         guard
-                            let json = dummy as? UnboxableDictionary,
+                            let json = success as? UnboxableDictionary,
                             let resource: CartListsResource = try? unbox(dictionary: json)
                             else {
                                 print("パース失敗")
                                 observer.onError(NewsError.Server(nil))
                                 return
                         }
-                        
+
                         print("CartLists",resource)
-                        
+
                         observer.onNext(resource)
                         observer.onCompleted()
                         
