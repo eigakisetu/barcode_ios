@@ -123,6 +123,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="カート一覧" id="WcF-uf-Be7"/>
                     <connections>
+                        <outlet property="CartListsTableView" destination="VmF-nP-VKk" id="rYC-g6-74E"/>
                         <outlet property="cartListsTableView" destination="VmF-nP-VKk" id="GBF-sc-aWF"/>
                     </connections>
                 </viewController>

@@ -48,7 +48,6 @@
 		F62DA9741FA30AE700891162 /* GradientCircularProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DA9731FA30AE700891162 /* GradientCircularProgress.framework */; };
 		F62DA9771FA3100900891162 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DA9761FA3100900891162 /* DIContainer.swift */; };
 		F6712CE21FA6C99A00DB5242 /* CartListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6712CE11FA6C99A00DB5242 /* CartListsViewController.swift */; };
-		F6712CE61FA6C9FE00DB5242 /* CartListsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6712CE51FA6C9FE00DB5242 /* CartListsTableCell.xib */; };
 		F6712CE81FA6CA1900DB5242 /* CartListsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6712CE71FA6CA1900DB5242 /* CartListsModel.swift */; };
 		F6712CEA1FA6CA8400DB5242 /* CartListsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6712CE91FA6CA8400DB5242 /* CartListsResource.swift */; };
 		F6DD0C7E1FA713BB00DCEA04 /* CartListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DD0C7C1FA713BB00DCEA04 /* CartListsTableViewCell.swift */; };
@@ -100,7 +99,6 @@
 		F62DA9731FA30AE700891162 /* GradientCircularProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GradientCircularProgress.framework; path = Carthage/Build/iOS/GradientCircularProgress.framework; sourceTree = "<group>"; };
 		F62DA9761FA3100900891162 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		F6712CE11FA6C99A00DB5242 /* CartListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListsViewController.swift; sourceTree = "<group>"; };
-		F6712CE51FA6C9FE00DB5242 /* CartListsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartListsTableCell.xib; sourceTree = "<group>"; };
 		F6712CE71FA6CA1900DB5242 /* CartListsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListsModel.swift; sourceTree = "<group>"; };
 		F6712CE91FA6CA8400DB5242 /* CartListsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListsResource.swift; sourceTree = "<group>"; };
 		F6DD0C7C1FA713BB00DCEA04 /* CartListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListsTableViewCell.swift; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				F6712CE11FA6C99A00DB5242 /* CartListsViewController.swift */,
-				F6712CE51FA6C9FE00DB5242 /* CartListsTableCell.xib */,
 				F6712CE71FA6CA1900DB5242 /* CartListsModel.swift */,
 				F6DD0C7C1FA713BB00DCEA04 /* CartListsTableViewCell.swift */,
 				F6DD0C7D1FA713BB00DCEA04 /* CartListsTableViewCell.xib */,
@@ -371,7 +368,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6DD0C7F1FA713BB00DCEA04 /* CartListsTableViewCell.xib in Resources */,
-				F6712CE61FA6C9FE00DB5242 /* CartListsTableCell.xib in Resources */,
 				F617AA3A1FA1AC4900203647 /* LaunchScreen.storyboard in Resources */,
 				F617AA371FA1AC4900203647 /* Assets.xcassets in Resources */,
 				F617AA351FA1AC4900203647 /* Main.storyboard in Resources */,
